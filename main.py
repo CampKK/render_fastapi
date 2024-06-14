@@ -4,6 +4,9 @@ from fastapi import FastAPI
 
 import random  # randomライブラリを追加
 
+from fastapi.responses import HTMLResponse #インポート
+
+
 app = FastAPI()
 
 
@@ -31,3 +34,18 @@ def omikuji():
     ]
 
     return omikuji_list[random.randrange(10)]
+
+    @app.get("/index")
+    def index():
+        html_content = """
+        <html>
+            <head>
+                <title>Some HTML in here</title>
+            </head>
+            <body>
+                <h1>Look ma! HTML!</h1>
+                <p>キャンプ楽しい</p>
+            </body>
+        </html>
+        """
+        return HTMLResponse(content=html_content, status_code=200)
