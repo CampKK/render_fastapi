@@ -46,6 +46,7 @@ def omikuji():
                 <h1>Look ma! HTML!</h1>
                 <p>キャンプ楽しい</p>
                 <br><p>夏休み3回キャンプ行きたい</p>
+                <br><p>ハッカソン出場します</p>
             </body>
         </html>
         """
